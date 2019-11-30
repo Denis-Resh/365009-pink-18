@@ -1,0 +1,11 @@
+.button-action(@button-bg-color, @button-font-color) {
+  &:hover,
+  &:focus {
+    background-color: @button-bg-color;
+    color: @button-font-color;
+  }
+  &:active {
+    background-color: @button-bg-color;
+    color: fade(@button-font-color, 30%);
+  }
+}
