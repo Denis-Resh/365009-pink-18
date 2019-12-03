@@ -3,34 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="#"><img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Логотип"></a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Меню</button>
+      <nav class="main-nav main-nav--opened">
         <div class="main-nav__wrapper">
+          <div class="main-nav__logo">
+            <a class="main-nav__logo-link"><img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Pink"></a>
+          </div>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a href="#">Главная</a></li>
-            <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-            <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-            <li class="site-list__item"><a href="#">HTML Academy</a></li>
+            <li class="site-list__item"><a class="site-list__link">Главная</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="form.html">Конкурс</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Pink - приложение для раскраски ваших фотографий</h1>
-      <p class="page-main__slogan">Взгляните на жизнь иначе!</p>
+      <p class="page-main__title">Взгляните на жизнь иначе!</p>
+      <img class="page-main__app-image" src="img/iphone-hand-mobile@1x.png" width="258" height="258" alt="Демонстрация работы приложения">
       <section class="app-download">
         <h2 class="visually-hidden">Загрузить приложение Pink</h2>
-        <img class="app-download__app-image" src="https://via.placeholder.com/150x150" alt="Демонстрация работы приложения">
         <div class="app-download__wrapper">
           <a class="app-download__button button" href="#">Скачать приложение</a>
           <ul class="app-download__list platform-list">
-            <li class="platform-list__item"><a class="platform-list__apple" href="#">Apple</a></li>
-            <li class="platform-list__item"><a class="platform-list__android" href="#">Android</a></li>
-            <li class="platform-list__item"><a class="platform-list__windows" href="#">Windows</a></li>
+            <li class="platform-list__item"><a class="platform-list__link platform-list__apple" href="#"><span class="visually-hidden">Apple</span></a></li>
+            <li class="platform-list__item"><a class="platform-list__link platform-list__android" href="#"><span class="visually-hidden">Android</span></a></li>
+            <li class="platform-list__item"><a class="platform-list__link platform-list__microsoft" href="#"><span class="visually-hidden">Windows</span></a></li>
           </ul>
           <p class="app-download__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
@@ -38,68 +41,26 @@
       <section class="app-advantages">
         <header class="app-advantages__header">
           <h2 class="visually-hidden">Приемущества нашего приложения</h2>
-          <p class="app-advantages__slogan">Устали от серостей мегаполиса?</p>
+          <p class="app-advantages__slogan">Устали от серости мегаполиса?</p>
           <p class="app-advantages__slogan">Нам есть, что вам предложить!</p>
         </header>
-        <ul class="app-advantages__list advantages-list">
-          <li class="advantages-list__item">
-            <b class="advantages-list__slogan">Поднимает настроение</b>
-            <p class="advantages-list__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages-list__item">
-            <b class="advantages-list__slogan">Меняет мир вокруг</b>
-            <p class="advantages-list__text">Сделайте снимок и украсте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="advantages-list__item">
-            <b class="advantages-list__slogan">Заводит новых друзей</b>
-            <p class="advantages-list__text">Ставте лайки, комментируйте, делитись фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
-        <img class="app-advantages__advantages-image" src="https://via.placeholder.com/150x150" alt="Демонстрация работы приложения">
-      </section>
-      <section class="reviews-slider slider">
-        <input class="slider__slider-toggle visually-hidden" type="radio" name="slider-toggle" checked>
-        <input class="slider__slider-toggle visually-hidden" type="radio" name="slider-toggle">
-        <input class="slider__slider-toggle visually-hidden" type="radio" name="slider-toggle">
-        <div class="reviews-slider__item">
-          <b class="reviews-slider__nickname">Николай Петров</b>
-          <p class="reviews-slider__text">
-            «Это приложение перевернуло мой мир и
-            позволило по-новому взглянуть на
-            привычные серые вещи! А еще я
-            познакомился со своей будущей женой в
-            комментариях к выложенной фотографии!»
-          </p>
+        <div class="app-advantages__wrapper">
+          <ul class="app-advantages__list advantages-list">
+            <li class="advantages-list__item">
+              <b class="advantages-list__slogan">Поднимает настроение</b>
+              <p class="advantages-list__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="advantages-list__item">
+              <b class="advantages-list__slogan">Меняет мир вокруг</b>
+              <p class="advantages-list__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="advantages-list__item">
+              <b class="advantages-list__slogan">Заводит новых друзей</b>
+              <p class="advantages-list__text">Ставте лайки, комментируйте, делитись фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+          <img class="app-advantages__image" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Демонстрация работы приложения">
         </div>
-        <div class="reviews-slider__item">
-          <b class="reviews-slider__nickname">Николай Петров</b>
-          <p class="reviews-slider__text">
-            «Это приложение перевернуло мой мир и
-            позволило по-новому взглянуть на
-            привычные серые вещи! А еще я
-            познакомился со своей будущей женой в
-            комментариях к выложенной фотографии!»
-          </p>
-        </div>
-        <div class="reviews-slider__item">
-          <b class="reviews-slider__nickname">Николай Петров</b>
-          <p class="reviews-slider__text">
-            «Это приложение перевернуло мой мир и
-            позволило по-новому взглянуть на
-            привычные серые вещи! А еще я
-            познакомился со своей будущей женой в
-            комментариях к выложенной фотографии!»
-          </p>
-        </div>
-      </section>
-      <section class="price-slider slider">
-        <input class="slider__slider-toggle visually-hidden" type="radio" name="slider-toggle" checked>
-        <input class="slider__slider-toggle visually-hidden" type="radio" name="slider-toggle">
-        <input class="slider__slider-toggle visually-hidden" type="radio" name="slider-toggle">
-
-        <table class="price-table">
-
-        </table>
       </section>
     </main>
   </body>

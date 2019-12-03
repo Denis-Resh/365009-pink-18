@@ -3,84 +3,101 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="#"><img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Логотип"></a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Меню</button>
+      <nav class="main-nav main-nav--opened">
         <div class="main-nav__wrapper">
+          <div class="main-nav__logo">
+            <a class="main-nav__logo-link" href="index.html"><img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Pink"></a>
+          </div>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
-            <li class="site-list__item"><a href="#">Фотографии</a></li>
-            <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-            <li class="site-list__item"><a href="#">HTML Academy</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
+            <li class="site-list__item"><a class="site-list__link">Фотографии</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="form.html">Конкурс</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Фотогалерея</h1>
-      <p class="page-main__slogan">Фотографии пользователей</p>
+      <p class="page-main__title">Фотографии пользователей</p>
       <section class="users-photos">
+        <p class="users-photos__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <h2 class="visually-hidden">Фотографии пользователей</h2>
-        <p class="users-photos__slogan">Взгляните на фотографии, которые выкладывают наши пользователи! Видите, как не хватает ваших?</p>
         <ul class="users-photos__list photos-list">
           <li class="photos-list__item">
-            <a href="#"><img class="photos-list__image photos-list__image--panorama" src="https://via.placeholder.com/150x150" alt="Фотография пользователя"></a>
-            <p class="photos-list__user-name"><b>Анна</b> <time datetime="2019-11-11" class="photos-list__post-time">(5 минут назад)</time></p>
-            <p class="photos-list__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <button class="photos-list__like-button" type="button">Нравится: 215</button>
+            <a class="photos-list__link photos-list__link--panorama" href="#"><img class="photos-list__image" src="../img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография пользователя"></a>
+            <div class="photos-list__post">
+              <b class="photos-list__user-name">Анна</b> <time datetime="2019-11-11" class="photos-list__post-time">(5 минут назад)</time>
+              <p class="photos-list__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <button class="photos-list__like-button" type="button">Нравится: 215</button>
+            </div>
           </li>
           <li class="photos-list__item">
-            <a href="#"><img class="photos-list__image" src="https://via.placeholder.com/150x150" alt="Фотография пользователя"></a>
-            <p class="photos-list__user-name"><b>Левон</b> <time datetime="2019-11-11" class="photos-list__post-time">(5 часов назад)</time></p>
-            <p class="photos-list__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <button class="photos-list__like-button" type="button">Нравится: 356</button>
+            <a class="photos-list__link" href="#"><img class="photos-list__image" src="../img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя"></a>
+            <div class="photos-list__post">
+              <p class="photos-list__user-name"><b>Левон</b> <time datetime="2019-11-11" class="photos-list__post-time">(5 часов назад)</time></p>
+              <p class="photos-list__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <button class="photos-list__like-button" type="button">Нравится: 356</button>
+            </div>
           </li>
           <li class="photos-list__item">
-            <a href="#"><img class="photos-list__image" src="https://via.placeholder.com/150x150" alt="Фотография пользователя"></a>
-            <p class="photos-list__user-name"><b>Антон</b> <time datetime="2019-11-10" class="photos-list__post-time">(12 часов назад)</time></p>
-            <p class="photos-list__description">Соседи будут рады!</p>
-            <button class="photos-list__like-button" type="button">Нравится: 666</button>
+            <a class="photos-list__link" href="#"><img class="photos-list__image" src="../img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя"></a>
+            <div class="photos-list__post">
+              <p class="photos-list__user-name"><b>Антон</b> <time datetime="2019-11-10" class="photos-list__post-time">(12 часов назад)</time></p>
+              <p class="photos-list__description">Соседи будут рады!</p>
+              <button class="photos-list__like-button" type="button">Нравится: 666</button>
+            </div>
           </li>
           <li class="photos-list__item">
-            <a href="#"><img class="photos-list__image" src="https://via.placeholder.com/150x150" alt="Фотография пользователя"></a>
-            <p class="photos-list__user-name"><b>Борис</b> <time datetime="2019-11-10" class="photos-list__post-time">(20 часов назад)</time></p>
-            <p class="photos-list__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="photos-list__like-button" type="button">Нравится: 215</button>
+            <a class="photos-list__link" href="#"><img class="photos-list__image" src="../img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя"></a>
+            <div class="photos-list__post">
+              <p class="photos-list__user-name"><b>Борис</b> <time datetime="2019-11-10" class="photos-list__post-time">(20 часов назад)</time></p>
+              <p class="photos-list__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <button class="photos-list__like-button" type="button">Нравится: 215</button>
+            </div>
           </li>
           <li class="photos-list__item">
-            <a href="#"><img class="photos-list__image" src="https://via.placeholder.com/150x150" alt="Фотография пользователя"></a>
-            <p class="photos-list__user-name"><b>Сергей</b> <time datetime="2019-11-10" class="photos-list__post-time">(25 часов назад)</time></p>
-            <p class="photos-list__description">Самая кубанская в мире!</p>
-            <button class="photos-list__like-button" type="button">Нравится: 4</button>
+            <a class="photos-list__link" href="#"><img class="photos-list__image" src="../img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя"></a>
+            <div class="photos-list__post">
+              <p class="photos-list__user-name"><b>Сергей</b> <time datetime="2019-11-10" class="photos-list__post-time">(25 часов назад)</time></p>
+              <p class="photos-list__description">Самая кубанская в мире!</p>
+              <button class="photos-list__like-button" type="button">Нравится: 4</button>
+            </div>
           </li>
           <li class="photos-list__item">
-            <a href="#"><img class="photos-list__image" src="https://via.placeholder.com/150x150" alt="Фотография пользователя"></a>
-            <p class="photos-list__user-name"><b>Максим</b> <time datetime="2019-11-10" class="photos-list__post-time">(40 часов назад)</time></p>
-            <p class="photos-list__description">Где снег-то?</p>
-            <button class="photos-list__like-button" type="button">Нравится: 150</button>
+            <a class="photos-list__link" href="#"><img class="photos-list__image" src="../img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя"></a>
+            <div class="photos-list__post">
+              <p class="photos-list__user-name"><b>Максим</b> <time datetime="2019-11-10" class="photos-list__post-time">(40 часов назад)</time></p>
+              <p class="photos-list__description">Где снег-то?</p>
+              <button class="photos-list__like-button" type="button">Нравится: 150</button>
+            </div>
           </li>
           <li class="photos-list__item">
-            <a href="#"><img class="photos-list__image" src="https://via.placeholder.com/150x150" alt="Фотография пользователя"></a>
-            <p class="photos-list__user-name"><b>Надежда</b> <time datetime="2019-11-10" class="photos-list__post-time">(45 часов назад)</time></p>
-            <p class="photos-list__description">Всем GM и взаимные лайки!</p>
-            <button class="photos-list__like-button" type="button">Нравится: 2560</button>
+            <a class="photos-list__link" href="#"><img class="photos-list__image" src="../img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя"></a>
+            <div class="photos-list__post">
+              <p class="photos-list__user-name"><b>Надежда</b> <time datetime="2019-11-10" class="photos-list__post-time">(45 часов назад)</time></p>
+              <p class="photos-list__description">Всем GM и взаимные лайки!</p>
+              <button class="photos-list__like-button" type="button">Нравится: 2560</button>
+            </div>
           </li>
         </ul>
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html"><img class="page-footer__logo-image" src="https://via.placeholder.com/150x150" alt="Логотип Pink"></a>
+      <a class="page-footer__logo" href="index.html"><img class="page-footer__logo-image" src="../img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink"></a>
       <ul class="page-footer__list social-list">
-        <li class="social-list__item"><a class="social-list__link social-list__link--twitter" href="#">Twitter</a></li>
-        <li class="social-list__item"><a class="social-list__link social-list__link--facebook" href="#">Facebook</a></li>
-        <li class="social-list__item"><a class="social-list__link social-list__link--youtube" href="#">Youtube</a></li>
+        <li class="social-list__item"><a class="social-list__link social-list__twitter-icon" href="#"><span class="visually-hidden">Twitter</span></a></li>
+        <li class="social-list__item"><a class="social-list__link social-list__facebook-icon" href="#"><span class="visually-hidden">Facebook</span></a></li>
+        <li class="social-list__item"><a class="social-list__link social-list__youtube-icon" href="#"><span class="visually-hidden">Youtube</span></a></li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img class="page-footer__copyright-logo" src="https://via.placeholder.com/150x150" alt="HTML Academy"></a>
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
       </div>
     </footer>
   </body>
