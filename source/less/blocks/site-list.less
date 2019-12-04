@@ -37,7 +37,46 @@
 }
 
 @media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 703px;
+
+    font-weight: normal;
+    text-transform: none;
+  }
+
   .site-list__item:last-child {
     position: static;
+
+    width: auto;
+  }
+
+  .site-list__link {
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-bottom: 39px;
+    padding-top: 39px;
+
+    background-color: transparent;
+
+    border: none;
+    &--active {
+      position: relative;
+      &::after {
+        content: "";
+
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+
+        height: 2px;
+        width: 108px;
+        margin-left: -54px;
+
+        background-color: #ffffff;
+      }
+    }
   }
 }
