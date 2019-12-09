@@ -1,12 +1,7 @@
 .site-list {
+  // position: relative;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.site-list__item:last-child {
-  position: absolute;
-
-  width: 100%;
 }
 
 .site-list__link {
@@ -36,6 +31,9 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+}
+
 @media (min-width: @desktop-width) {
   .site-list {
     display: flex;
@@ -47,11 +45,11 @@
     text-transform: none;
   }
 
-  .site-list__item:last-child {
-    position: static;
+  // .site-list__item:last-child {
+  //   position: static;
 
-    width: auto;
-  }
+  //   width: auto;
+  // }
 
   .site-list__link {
     padding-left: 42px;

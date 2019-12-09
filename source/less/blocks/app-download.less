@@ -1,17 +1,15 @@
 .app-download {
   color: #ffffff;
 
-  margin-bottom: 40px;
-}
-
-.app-download__wrapper {
+  width: 320px;
+  margin-top: 313px;
   background-color: #1d2631;
 }
 
 .app-download__button {
   color: #ffffff;
   margin-left: 20px;
-  margin-top: 25px;
+  margin-top: 28px;
   margin-bottom: 32px;
   .button-action(#ffffff, #d22856);
 }
@@ -31,5 +29,46 @@
 
   width: 230px;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
+}
+
+@media (min-width: @tablet-width) {
+  .app-download {
+    margin: 0;
+    padding-bottom: 80px;
+    width: 340px;
+
+    background-color: transparent;
+  }
+
+  .app-download__button {
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+
+  .app-download__list {
+    margin-bottom: 34px;
+  }
+
+  .app-download__legend {
+    font-size: 18px;
+
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app-download {
+    padding-left: 110px;
+    padding-bottom: 94px;
+  }
+
+  .app-download__button {
+    margin-top: 51px;
+    margin-bottom: 66px;
+  }
+
+  .app-download__list {
+    margin-bottom: 51px;
+  }
 }
