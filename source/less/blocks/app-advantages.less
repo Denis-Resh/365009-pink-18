@@ -5,30 +5,20 @@
 }
 
 .app-advantages__header {
-  position: relative;
-  &::after {
-  content: "";
-
-  position: absolute;
-  bottom: -65px;
-
-  width: 320px;
-  height: 95px;
-
-  background-image: url("../img/bg-triangle-white.svg");
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  }
 }
 
 .app-advantages__wrapper {
   background-color: #f2f2f2;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+
 }
 
 .app-advantages__list {
   margin: 0;
   padding: 0;
-  padding-top: 85px;
+  padding-top: 110px;
   padding-bottom: 13px;
 
   list-style: none;
@@ -40,10 +30,13 @@
   text-align: center;
 
   margin: 0 auto;
-  padding: 0;
   margin-bottom: 25px;
+  padding: 0;
 
   width: 220px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .app-advantages__image {
