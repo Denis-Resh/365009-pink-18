@@ -1,27 +1,12 @@
 .app-advantages {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
-  background-color: #ffffff;
-}
 
-.app-advantages__header {
-}
-
-.app-advantages__wrapper {
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-position: top;
-
-}
-
-.app-advantages__list {
-  margin: 0;
-  padding: 0;
-  padding-top: 110px;
-  padding-bottom: 13px;
-
-  list-style: none;
+  background-position: top right -2300px;
+  background-size: cover;
 }
 
 .app-advantages__slogan {
@@ -33,13 +18,47 @@
   margin-bottom: 25px;
   padding: 0;
 
-  width: 220px;
-  &:last-child {
+  &:last-of-type {
     margin-bottom: 0;
+    width: 220px
   }
+}
+
+.app-advantages__list {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+
+  list-style: none;
 }
 
 .app-advantages__image {
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width:@tablet-width) {
+  .app-advantages {
+    width: 100%;
+  }
+
+  .app-advantages__slogan {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 0;
+    &:last-of-type {
+      width: 340px
+    }
+  }
+}
+
+
+@media (min-width:@desktop-width) {
+  .app-advantages__slogan {
+    font-size: 50px;
+    line-height: 60px;
+    &:last-of-type {
+      width: 430px
+    }
+  }
 }
