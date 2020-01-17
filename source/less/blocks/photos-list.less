@@ -32,33 +32,34 @@
 
 .photos-list__link--panorama {
   width: 320px;
-}
 
-.photos-list__link--panorama::after {
-  content: "Панорама дня";
+  &::after {
+    content: "Панорама дня";
 
-  position: absolute;
-  right: 20px;
-  top: 0;
+    position: absolute;
+    right: 20px;
+    top: 0;
 
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: bold;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
 
-  width: 140px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  text-align: center;
+    width: 140px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
 
-  background-color: #d22856;
+    background-color: #d22856;
+  }
 }
 
 .photos-list__like-button {
   position: relative;
-  font-size: 12px;
+
   color: #d22856;
+  font-size: 12px;
   text-transform: uppercase;
 
   padding-left: 34px;
@@ -66,17 +67,17 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
-}
 
-.photos-list__like-button::before {
-  content: "";
+  &::before {
+    content: "";
 
-  position: absolute;
-  left: 1px;
+    position: absolute;
+    left: 1px;
 
-  width: 13px;
-  height: 12px;
+    width: 13px;
+    height: 12px;
 
-  background-image: url("../img/icon-heart.svg");
-  background-repeat: no-repeat;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+  }
 }

@@ -3,7 +3,6 @@
 
   margin: 0 auto;
   width: 320px;
-  background-color: #283645;
 }
 
 .main-nav__list {
@@ -14,6 +13,7 @@
 }
 
 .main-nav__logo {
+  background-color: #283645;
   border-bottom: 1px solid #000000;
 }
 
@@ -30,60 +30,53 @@
   display: block;
 }
 
-@media (max-width: @gadgets-olny) {
-  .main-nav__toggle {
-    position: absolute;
-    top: 18px;
-    right: 16px;
+.main-nav__toggle {
+  position: absolute;
+  top: 18px;
+  right: 16px;
 
-    display: block;
+  display: block;
 
-    height: 30px;
+  height: 30px;
 
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
 
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
+@media (max-width: @gadgets-only) {
   .main-nav--closed .site-list {
     display: none;
   }
 
   .main-nav--closed .main-nav__logo {
-    position: absolute;
-    top: 0;
-
-    width: 100%;
-    // min-height: 66px;
-
     background-color: rgba(29, 38, 49, 0.3);
     border: none;
   }
+}
 
-  .main-nav--closed .main-nav__toggle {
-    width: 50px;
+.main-nav--closed .main-nav__toggle {
+  width: 50px;
+  z-index: 20;
 
-    background-image: url("../img/icon-menu-burger.svg");
-  }
+  background-image: url("../img/icon-menu-burger.svg");
+}
 
-  .main-nav--opened .main-nav__toggle {
-    width: 30px;
+.main-nav--opened .main-nav__toggle {
+  width: 30px;
 
-    background-image: url("../img/icon-menu-cross.svg");
-  }
+  background-image: url("../img/icon-menu-cross.svg");
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: 660px;
+    width: auto;
   }
 
   .main-nav__logo-link {
-    position: relative;
-
     padding-left: 92px;
     padding-top: 44px;
     padding-bottom: 42px;
@@ -92,21 +85,54 @@
   .main-nav__toggle {
     top: 43px;
   }
-
-  // .main-nav__logo-link::before {
-  //   content: "";
-
-  //   position: absolute;
-  //   right: 1px;
-  //   bottom: 43px;
-
-  //   width: 146px;
-  //   height: 40px;
-
-  //   background-image: url("../img/logo-pink-white-tablet.svg");
-  //   background-repeat: no-repeat;
-  // }
 }
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1200px;
+
+    background-color: transparent;
+  }
+
+  .main-nav__logo {
+    width: 160px;
+    margin-left: 125px;
+
+    background-color: tomato;
+    border: none;
+  }
+
+  .main-nav__logo-link {
+    padding: 0;
+
+    background-color: skyblue;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    margin-right: 90px;
+  }
+}
+
+// .main-nav__logo-link::before {
+//   content: "";
+
+//   position: absolute;
+//   right: 1px;
+//   bottom: 43px;
+
+//   width: 146px;
+//   height: 40px;
+
+//   background-image: url("../img/logo-pink-white-tablet.svg");
+//   background-repeat: no-repeat;
+// }
 
 // @media (min-width: @desktop-width) {
 //   .main-nav {
