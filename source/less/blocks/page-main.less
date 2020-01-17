@@ -1,19 +1,19 @@
 .page-main {
   position: relative;
 
-  width: 320px;
+  width: auto;
   margin: 0 auto;
   margin-top: -67px;
 }
 
 .page-main__wrapper {
-  margin-bottom: 41px;
+  // margin-bottom: 41px;
 
   background-color: #1d2631;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-tablet-2@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 100%;
+  // background-size: cover;
 }
 
 .page-main__index-bg {
@@ -36,6 +36,10 @@
     padding-top: 89px;
     padding-bottom: 313px;
   }
+
+  &--contest {
+    padding-bottom: 52px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -45,11 +49,11 @@
   }
 
   .page-main__wrapper {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: top;
-    background-size: cover;
+    // background-size: cover;
   }
 
   .page-main__index-bg {
@@ -59,16 +63,28 @@
   }
 
   .page-main__title {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
 
-    width: 200px;
-    margin: 0;
+    width: 370px;
+    padding-top: 180px;
+    padding-bottom: 140px;
 
     &--index {
+      font-size: 40px;
+      line-height: 48px;
+
+      width: 200px;
+      margin: 0;
       padding-bottom: 0;
       padding-left: 70px;
       padding-top: 204px;
+    }
+
+    &--contest {
+      width: 490px;
+      padding-bottom: 80px;
     }
   }
 }
@@ -79,7 +95,7 @@
   }
 
   .page-main__wrapper {
-    margin-bottom: 68px;
+    margin-bottom: 0;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: top;
@@ -92,15 +108,21 @@
   }
 
   .page-main__title {
-    font-size: 50px;
-    line-height: 60px;
-
-    width: 240px;
-    margin: 0;
+    padding-top: 174px;
+    padding-bottom: 101px;
 
     &--index {
-      padding-left: 40px;
+      font-size: 50px;
+      line-height: 60px;
+      width: 240px;
       padding-top: 220px;
+      padding-bottom: 0;
+      padding-left: 40px;
+    }
+
+    &--contest {
+      width: 760px;
+      padding-bottom: 101px;
     }
   }
 }

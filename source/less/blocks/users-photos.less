@@ -1,16 +1,15 @@
 .users-photos {
   font-size: 14px;
-
-  background-color: #ffffff;
+  line-height: 24px;
 }
 
 .users-photos__slogan {
+  line-height: 30px;
   text-align: center;
 
   width: 240px;
 
   margin: 0 auto;
-  margin-top: 58px;
   padding-top: 45px;
   padding-bottom: 49px;
 }
@@ -18,6 +17,23 @@
 .users-photos__list {
   margin: 0 auto;
   padding: 0;
+}
 
-  list-style: none;
+@media (min-width: @tablet-width) {
+  .users-photos__slogan {
+    font-size: 18px;
+
+    width: 420px;
+
+    padding-top: 92px;
+    padding-bottom: 76px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .users-photos__slogan {
+    width: 585px;
+
+    padding-bottom: 88px;
+  }
 }
