@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__logo">
           <a class="main-nav__logo-link" href="index.html"><img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Pink"></a>
         </div>
@@ -49,25 +50,21 @@
         </article>
         <ul class="users-photos__list photos-list">
           <li class="photos-list__item post">
-
-              <a class="post__image-link" href="#">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg">
-                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
-                  <img class="post__image" src="../img/photo-car-mobile@1x.jpg" alt="Фотография пользователя">
-                </picture>
-              </a>
-
-                <p class="post__user">
-                  <b class="post__user-name">Левон</b> <time  class="post__time" datetime="2019-11-11">(5 часов назад)</time>
-                </p>
-                <p class="post__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <div class="post__like-wrapper">
-                  <button class="post__like-button" type="button"></button>
-                  <span class="post__like-counter">Нравится: 356</span>
-                </div>
-
-
+            <a class="post__image-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
+                <img class="post__image" src="../img/photo-car-mobile@1x.jpg" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <p class="post__user">
+              <b class="post__user-name">Левон</b> <time  class="post__time" datetime="2019-11-11">(5 часов назад)</time>
+            </p>
+            <p class="post__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="post__like-wrapper">
+              <button class="post__like-button" type="button"></button>
+              <span class="post__like-counter">Нравится: 356</span>
+            </div>
           </li>
           <li class="photos-list__item post">
 
@@ -190,5 +187,22 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs')
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
