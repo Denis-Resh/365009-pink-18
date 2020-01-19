@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__logo">
           <a class="main-nav__logo-link"><img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Pink"></a>
         </div>
@@ -25,17 +26,19 @@
       <div class="page-main__wrapper">
         <div class="page-main__index-bg container">
           <p class="page-main__title page-main__title--index">Взгляните на жизнь иначе!</p>
-          <section class="app-download">
-            <h2 class="visually-hidden">Загрузить приложение Pink</h2>
-            <a class="app-download__button button" href="#">Скачать приложение</a>
-            <ul class="app-download__list platform-list">
-              <li class="platform-list__item"><a class="platform-list__link platform-list__apple" href="#"><span class="visually-hidden">Apple</span></a></li>
-              <li class="platform-list__item"><a class="platform-list__link platform-list__android" href="#"><span class="visually-hidden">Android</span></a></li>
-              <li class="platform-list__item"><a class="platform-list__link platform-list__microsoft" href="#"><span class="visually-hidden">Windows</span></a></li>
-            </ul>
-            <p class="app-download__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-          </section>
         </div>
+      </div>
+      <div class="page-main__app-download-wrapper">
+        <section class="app-download">
+          <h2 class="visually-hidden">Загрузить приложение Pink</h2>
+          <a class="app-download__button button" href="#">Скачать приложение</a>
+          <ul class="app-download__list platform-list">
+            <li class="platform-list__item"><a class="platform-list__link platform-list__apple" href="#"><span class="visually-hidden">Apple</span></a></li>
+            <li class="platform-list__item"><a class="platform-list__link platform-list__android" href="#"><span class="visually-hidden">Android</span></a></li>
+            <li class="platform-list__item"><a class="platform-list__link platform-list__microsoft" href="#"><span class="visually-hidden">Windows</span></a></li>
+          </ul>
+          <p class="app-download__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </section>
       </div>
       <section class="app-advantages">
         <h2 class="visually-hidden">Приемущества нашего приложения</h2>
@@ -65,5 +68,22 @@
         </div>
       </section>
     </main>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs')
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
