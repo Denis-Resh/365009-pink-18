@@ -1,6 +1,7 @@
 .app-advantages {
   width: 100%;
   margin: 0 auto;
+  margin-top: 41px;
 
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
@@ -14,13 +15,13 @@
   font-size: 24px;
   text-align: center;
 
+  width: 220px;
   margin: 0 auto;
   margin-bottom: 25px;
   padding: 0;
 
   &:last-of-type {
     margin-bottom: 0;
-    width: 220px;
   }
 }
 
@@ -39,11 +40,14 @@
 @media (min-width: @tablet-width) {
   .app-advantages {
     width: 100%;
+    margin-top: 50px;
   }
 
   .app-advantages__slogan {
     font-size: 40px;
     line-height: 48px;
+
+    width: 100%;
     margin-bottom: 0;
 
     &:last-of-type {
@@ -52,8 +56,11 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
+  .app-advantages {
+    margin-top: 67px;
+  }
+
   .app-advantages__slogan {
     font-size: 50px;
     line-height: 60px;
