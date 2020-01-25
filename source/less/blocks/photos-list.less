@@ -6,7 +6,7 @@
 .photos-list__item {
   margin-bottom: 20px;
 
-  &:nth-last-child(-n+2) {
+  &:last-child {
     margin-bottom: 0;
   }
 }
@@ -21,12 +21,18 @@
 
   .photos-list__item {
     margin-right: 20px;
+    // margin-bottom: 20px;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .photos-list {

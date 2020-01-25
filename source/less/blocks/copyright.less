@@ -1,20 +1,35 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 128px;
+}
+
 .copyright__text {
   font-size: 14px;
   line-height: 18px;
 }
 
 .copyright__link {
-  position: relative;
+  color: #d22856;
+
+  &:hover,
+  &:focus {
+    color: #283645;
+  }
+
+  &:active {
+    color: fade(#283645, 30%);
+  }
 }
 
-.copyright__link::before {
-  content: "";
+@media (min-width: @desktop-width) {
+  .copyright {
+    width: 154px;
+  }
 
-  position: absolute;
-
-  width: 29px;
-  height: 38px;
-
-  background-image: url("../img/htmlacademy.svg");
-  background-repeat: no-repeat;
+  .copyright__text {
+    font-size: inherit;
+  }
 }
