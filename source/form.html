@@ -129,8 +129,93 @@
       <div class="page-main__wrapper">
         <p class="page-main__title page-main__title--contest">Конкурс на самое безбашенное путешествие с Пинк</p>
       </div>
-      <section class="contest-form">
+      <section class="contest">
         <h2 class="visually-hidden">Форма конкурса</h2>
+        <p class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+        <form class="contest__form container" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="contest__name">
+            <legend class="visually-hidden">ФИО</legend>
+            <ul>
+              <li>
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
+              </li>
+              <li>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя*">
+              </li>
+              <li>
+                <label for="patronymic">Отчество:</label>
+                <input type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="contest__achievements">
+            <legend>Ваши безбашенные достижения в путешествии</legend>
+            <ul>
+              <li>
+                <input type="checkbox" id="achievemt-1" name="achievemt-1" checked>
+                <label for="achievemt-1">Сделал селфи с акулой</label>
+              </li>
+              <li>
+                <input type="checkbox" id="achievemt-2" name="achievemt-2" checked>
+                <label for="achievemt-2">Обгорел на пляже</label>
+              </li>
+              <li>
+                <input type="checkbox" id="achievemt-3" name="achievemt-3">
+                <label for="achievemt-3">Видел Чака Норриса</label>
+              </li>
+              <li>
+                <input type="checkbox" id="achievemt-4" name="achievemt-4">
+                <label for="achievemt-4">Накупил сувениров</label>
+              </li>
+              <li>
+                <input type="checkbox" id="achievemt-5" name="achievemt-5" checked>
+                <label for="achievemt-5">Удержал башню</label>
+              </li>
+              <li>
+                <input type="checkbox" id="achievemt-6" name="achievemt-6">
+                <label for="achievemt-6">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="contest__contact-info">
+            <legend>Контактная информация</legend>
+            <ul>
+              <li>
+                <label for="phone">Номер телефона</label>
+                <input type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
+              </li>
+              <li>
+                <label for="email">Адрес почты</label>
+                <input type="text" id="email" name="email" placeholder="Введите почту*">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="contest__os">
+            <legend>С каким приложением путешествовали?</legend>
+            <ul>
+              <li>
+                <input type="radio" id="pink-ios" name="os" value="ios" checked>
+                <label for="pink-ios">Pink для iOS</label>
+              </li>
+              <li>
+                <input type="radio" id="pink-android" name="os" value="android">
+                <label for="pink-android">Pink на Android</label>
+              </li>
+              <li>
+                <input type="radio" id="pink-windows" name="os" value="windows">
+                <label for="pink-windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="contest__impressions">
+            <label>Опишите свои эмоции</label>
+            <textarea name="impressions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+          <button type="submit">Отправить форму</button>
+          <small>*-Обязательные поля</small>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
